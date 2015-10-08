@@ -10,6 +10,13 @@ namespace Graph
 
 		public Vertex ()
 		{
+			this.hasLabel = false;
+		}
+
+		public Vertex (string label)
+		{
+			this.label = label;
+			this.hasLabel = true;
 		}
 
 		// XXXX: Remind self how to link to private field?
@@ -47,8 +54,8 @@ namespace Graph
 
 	public class Graph
 	{
-		private HashSet<Vertex> vertices;
-		private HashSet<Edge> edges;
+		private HashSet<Graph.Vertex> vertices;
+		private HashSet<Graph.Edge> edges;
 
 		public Graph ()
 		{
@@ -60,6 +67,7 @@ namespace Graph
 
 		public void AddVertex (int label)
 		{
+			this.vertices.Add (new Graph.Vertex((string) label));
 		}
 
 		public void AddVertex (string label)
