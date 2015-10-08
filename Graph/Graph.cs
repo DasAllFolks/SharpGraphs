@@ -111,7 +111,7 @@ namespace Graph
 		}
 
 		// Add an edge using labels of existing vertices.
-		public void AddDirectedEdge(string TailLabel, string HeadLabel)
+		public void AddDirectedEdge(string tailLabel, string headLabel)
 		{
 
 		}
