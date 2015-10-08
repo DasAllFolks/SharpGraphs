@@ -24,7 +24,7 @@ namespace Graph
 			{
 				if (!this.hasLabel)
 				{
-					throw NoLabelFoundException;
+					throw NoLabelFoundException("This vertex is unlabeled.");
 				}
 			}
 			set;
