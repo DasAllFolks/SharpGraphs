@@ -53,8 +53,25 @@ namespace Graph
 		// Edges.
 		//
 		// Under this system, loops and multigraphs are also automatically supported.
-		public Edge ()
+		//
+		// Edges are Immutable after creation.
+		private Vertex tail;
+		private Vertex head;
+
+		public Edge (Vertex tail, Vertex head)
 		{
+			this.tail = tail;
+			this.head = head;
+		}
+
+		public Vertex Tail
+		{
+			get;
+		}
+
+		public Vertex Head
+		{
+			get;
 		}
 	}
 
