@@ -127,4 +127,9 @@ namespace Graph
 		{
 			this.AddDirectedEdge (label, label);
 		}
+
+		private getVertexByLabel(string label)
+		{
+			return "todo";
+		}
 }
