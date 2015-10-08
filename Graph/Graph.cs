@@ -43,6 +43,11 @@ namespace Graph
 			}
 		}
 
+		public void ClearLabel ()
+		{
+			this.hasLabel = false;
+		}
+
 		public class NoLabelFoundException : Exception
 		{
 		}
