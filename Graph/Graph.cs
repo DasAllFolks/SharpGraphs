@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -46,6 +47,9 @@ namespace Graph
 
 	public class Graph
 	{
+		private HashSet<Vertex> vertices;
+		private HashSet<Edge> edges;
+
 		public Graph ()
 		{
 		}
