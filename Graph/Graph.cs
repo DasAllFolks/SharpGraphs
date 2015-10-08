@@ -122,4 +122,9 @@ namespace Graph
 			this.AddDirectedEdge (label1, label2);
 			this.AddDirectedEdge (label2, label1);
 		}
+
+		public void AddLoop(string label)
+		{
+			this.AddDirectedEdge (label, label);
+		}
 }
