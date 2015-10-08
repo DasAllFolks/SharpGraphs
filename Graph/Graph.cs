@@ -20,8 +20,19 @@ namespace Graph
 
 		public string Label
 		{
-			get;
+			get
+			{
+				if (!this.hasLabel)
+				{
+					// XXXX: Throw a NoLabelFoundException.
+				}
+			}
 			set;
+		}
+
+		// XXXX: Remind self how to add message string.
+		public NoLabelFoundException : Exception
+		{
 		}
 	}
 
