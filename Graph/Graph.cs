@@ -15,8 +15,7 @@ namespace Graph
 
 		public Vertex (string label)
 		{
-			this.label = label;
-			this.hasLabel = true;
+			this.Label = label;
 		}
 
 		// XXXX: Remind self how to link to private field?
@@ -37,7 +36,11 @@ namespace Graph
 
 				return this.label;
 			}
-			set;
+			set
+			{
+				this.label = value;
+				this.hasLabel = true;
+			}
 		}
 
 		public class NoLabelFoundException : Exception
