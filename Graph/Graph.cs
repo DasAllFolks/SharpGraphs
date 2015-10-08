@@ -61,4 +61,17 @@ namespace Graph
 		public void AddVertex (string label)
 		{
 		}
+
+		// Add an edge using labels of existing vertices.
+		public void AddDirectedEdge(string TailLabel, string HeadLabel)
+		{
+
+		}
+
+		// Add an edge using two Vertex objects.
+		public void AddUndirectedEdge(string label1, string label2)
+		{
+			this.AddDirectedEdge (label1, label2);
+			this.AddDirectedEdge (label2, label1);
+		}
 }
