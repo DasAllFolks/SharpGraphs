@@ -26,6 +26,8 @@ namespace Graph
 				{
 					throw NoLabelFoundException("This vertex is unlabeled.");
 				}
+
+				return this.label;
 			}
 			set;
 		}
