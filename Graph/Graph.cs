@@ -11,7 +11,7 @@ namespace Graph
 		{
 		}
 
-		// Remind self how to link to private field?
+		// XXXX: Remind self how to link to private field?
 		public bool HasLabel
 		{
 			get;
