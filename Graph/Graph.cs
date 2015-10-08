@@ -114,6 +114,8 @@ namespace Graph
 
 		public void AddVertex (string label)
 		{
+			//TODO: This currently calls the if branch every time, and
+			//thus might need some optimization.
 			this.AddVertex (new Graph.Vertex (label));
 		}
 
