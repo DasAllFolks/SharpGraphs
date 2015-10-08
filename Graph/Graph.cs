@@ -4,6 +4,7 @@ namespace Graph
 {
 	public class Vertex
 	{
+		private bool hasLabel;
 		private string label;
 
 		public Vertex ()
@@ -11,7 +12,14 @@ namespace Graph
 		}
 
 		// Remind self how to link to private field?
-		public string Label {
+		public bool HasLabel
+		{
+			get;
+			set;
+		}
+
+		public string Label
+		{
 			get;
 			set;
 		}
