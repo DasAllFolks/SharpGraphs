@@ -102,6 +102,7 @@ namespace Graph
 
 		}
 
+		// If vertex already exists in graph, this is no-op.
 		public void AddVertex(Graph.Vertex vertex)
 		{
 			this.vertices.Add (vertex);
