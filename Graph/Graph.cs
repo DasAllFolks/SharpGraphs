@@ -21,5 +21,16 @@ namespace Graph
 		public Graph ()
 		{
 		}
-	}
+
+		public void AddVertex ()
+		{
+		}
+
+		public void AddVertex (int label)
+		{
+		}
+
+		public void AddVertex (string label)
+		{
+		}
 }
