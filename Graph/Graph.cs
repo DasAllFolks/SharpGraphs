@@ -86,6 +86,7 @@ namespace Graph
 	public class Graph
 	{
 		private HashSet<Graph.Vertex> vertices;
+		private Dictionary<string, Graph.Vertex> verticesByLabel;
 		private HashSet<Graph.Edge> edges;
 
 		public Graph ()
@@ -99,6 +100,15 @@ namespace Graph
 		public void AddVertex ()
 		{
 
+		}
+
+		public void AddVertex(Graph.Vertex vertex)
+		{
+			this.vertices.Add (vertex);
+			if (vertex.hasLabel)
+			{
+				this.verticesByLabel [vertex.Label] = vertex;
+			}
 		}
 
 		public void AddVertex (int label)
