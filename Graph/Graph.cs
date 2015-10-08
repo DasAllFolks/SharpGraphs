@@ -138,8 +138,19 @@ namespace Graph
 			this.AddDirectedEdge (label, label);
 		}
 
-		private getVertexByLabel(string label)
+		private Graph.Vertex getVertexByLabel(string label)
 		{
-			return "todo";
+			try
+			{
+				return this.verticesByLabel[label];
+			}
+			catch (KeyNotFoundException e)
+			{
+				throw new VertexNotFoundException ("No vertex found with label {0}", label);
+			}
+		}
+
+		public class VertexNotFoundException : Exception
+		{
 		}
 }
