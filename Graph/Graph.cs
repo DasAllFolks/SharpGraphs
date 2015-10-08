@@ -150,6 +150,15 @@ namespace Graph
 			}
 		}
 
+		// Gives the number of vertices in the graph.
+		public int Size
+		{
+			get
+			{
+				return this.vertices.Count;
+			}
+		}
+
 		public class VertexNotFoundException : Exception
 		{
 		}
