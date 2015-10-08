@@ -112,16 +112,16 @@ namespace Graph
 			}
 		}
 
-		public void AddVertex (int label)
-		{
-			this.vertices.Add (new Graph.Vertex((string) label));
-		}
-
 		public void AddVertex (string label)
 		{
 			Graph.Vertex vertex = new Graph.Vertex (label);
 			this.vertices.Add (vertex);
 			this.verticesByLabel [vertex.Label] = vertex;
+		}
+
+		public void AddVertex (int label)
+		{
+			this.AddVertex ((string) label);
 		}
 
 		// Add an edge using labels of existing vertices.
