@@ -24,14 +24,14 @@ namespace Graph
 			{
 				if (!this.hasLabel)
 				{
-					// XXXX: Throw a NoLabelFoundException.
+					throw NoLabelFoundException;
 				}
 			}
 			set;
 		}
 
 		// XXXX: Remind self how to add message string.
-		public NoLabelFoundException : Exception
+		public class NoLabelFoundException : Exception
 		{
 		}
 	}
