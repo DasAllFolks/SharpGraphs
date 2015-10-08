@@ -4,8 +4,16 @@ namespace Graph
 {
 	public class Vertex
 	{
+		private string label;
+
 		public Vertex ()
 		{
+		}
+
+		// Remind self how to link to private field?
+		public string Label {
+			get;
+			set;
 		}
 	}
 
