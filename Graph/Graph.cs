@@ -30,7 +30,6 @@ namespace Graph
 			set;
 		}
 
-		// XXXX: Remind self how to add message string.
 		public class NoLabelFoundException : Exception
 		{
 		}
