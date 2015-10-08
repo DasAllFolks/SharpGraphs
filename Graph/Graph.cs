@@ -114,9 +114,7 @@ namespace Graph
 
 		public void AddVertex (string label)
 		{
-			Graph.Vertex vertex = new Graph.Vertex (label);
-			this.vertices.Add (vertex);
-			this.verticesByLabel [vertex.Label] = vertex;
+			this.AddVertex (new Graph.Vertex (label));
 		}
 
 		public void AddVertex (int label)
