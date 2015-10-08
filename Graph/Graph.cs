@@ -47,6 +47,12 @@ namespace Graph
 
 	public class Edge
 	{
+		// All Edge objects correspond to a directed (unidirectional) graph edge.
+		//
+		// An undirected edge should be represented using a pair of such (directed)
+		// Edges.
+		//
+		// Under this system, loops and multigraphs are also automatically supported.
 		public Edge ()
 		{
 		}
@@ -61,8 +67,13 @@ namespace Graph
 		{
 		}
 
+		// Use 0-based labeling by default for vertices added without an explicit label.
+		//
+		// If the auto-generated label is already in use, keep searching upward until we find the first integer
+		// not taken for this purpose.
 		public void AddVertex ()
 		{
+
 		}
 
 		public void AddVertex (int label)
