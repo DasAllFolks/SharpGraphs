@@ -103,7 +103,16 @@ namespace Graph
 		}
 
 		// If vertex already exists in graph, this is no-op.
-		public void AddVertex (Graph.Vertex vertex)
+		//
+		// Note that this ignores the label on the vertex if
+		// it is labeled.
+		public void AddUnlabeledVertex (Graph.Vertex vertex)
+		{
+			this.vertices.Add (vertex);
+		}
+
+		// If vertex already exists in graph, this is no-op.
+		public void AddLabeledVertex (Graph.Vertex vertex)
 		{
 			this.vertices.Add (vertex);
 			if (vertex.hasLabel)
