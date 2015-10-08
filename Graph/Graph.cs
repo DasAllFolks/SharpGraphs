@@ -103,7 +103,7 @@ namespace Graph
 		}
 
 		// If vertex already exists in graph, this is no-op.
-		public void AddVertex(Graph.Vertex vertex)
+		public void AddVertex (Graph.Vertex vertex)
 		{
 			this.vertices.Add (vertex);
 			if (vertex.hasLabel)
@@ -119,6 +119,9 @@ namespace Graph
 
 		public void AddVertex (string label)
 		{
+			Graph.Vertex vertex = new Graph.Vertex (label);
+			this.vertices.Add (vertex);
+			this.verticesByLabel [vertex.Label] = vertex;
 		}
 
 		// Add an edge using labels of existing vertices.
