@@ -1,10 +1,8 @@
-# SharpGraph - An Open Source Graph Theory Library in C#
+# GraphSharp
 
-This project is currently under active development.
+A library of graph algorithms and data structures in C#.
 
-## Running the Tests
-
-TODO
+This package is currently WIP, but the plan is to ultimately turn it into a fully-tested NuGet package.
 
 ## License
 
