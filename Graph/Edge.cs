@@ -12,7 +12,7 @@ namespace Graph
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public class Edge<T> : IEdge<T> where T : struct
+    public class Edge<T> : IUndirectedEdge<T> where T : struct
     {
         /// <summary>
         /// The vertices comprising the edge.
@@ -27,7 +27,7 @@ namespace Graph
         /// </remarks>
         public Edge(T vertex1, T vertex2)
         {
-            // SortedSet used to beautify output for human readers.
+            // SortedSet used to beautify output for readers.
             _vertices = new SortedSet<T> { vertex1, vertex2 };
         }
 
@@ -35,7 +35,7 @@ namespace Graph
         /// Returns true iff the <see cref="Edge{T}"/> contains a given
         /// vertex.
         /// </summary>
-        public bool ContainsVertex(T vertex)
+        public bool Contains(T vertex)
         {
             return _vertices.Contains(vertex);
         }
