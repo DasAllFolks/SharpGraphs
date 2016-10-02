@@ -35,6 +35,13 @@ namespace Graph
         /// </exception>
         bool TryAddEdge(E edge, bool allowNewVertices = false);
 
+        /// <summary>
+        /// Attempts to remove an edge from the graph.
+        /// </summary>
+        /// <param name="edge">The edge.</param>
+        /// <returns>
+        /// True if the edge was successfully removed, false otherwise.
+        /// </returns>
         bool TryRemoveEdge(E edge);
     }
 }
