@@ -7,7 +7,12 @@
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IEdge<T>
+    public interface IEdge<T> where T : struct
     {
+        /// <summary>
+        /// Returns true iff the <see cref="IEdge{T}"/> contains a given
+        /// vertex.
+        /// </summary>
+        bool ContainsVertex(T vertex);
     }
 }

@@ -30,5 +30,14 @@ namespace Graph
             // SortedSet used to beautify output for human readers.
             _vertices = new SortedSet<T> { vertex1, vertex2 };
         }
+
+        /// <summary>
+        /// Returns true iff the <see cref="Edge{T}"/> contains a given
+        /// vertex.
+        /// </summary>
+        public bool ContainsVertex(T vertex)
+        {
+            return _vertices.Contains(vertex);
+        }
     }
 }
