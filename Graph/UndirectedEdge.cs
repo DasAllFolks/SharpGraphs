@@ -12,7 +12,7 @@ namespace Graph
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public class UndirectedEdge<T> : IUndirectedEdge<T> where T : struct
+    public struct UndirectedEdge<T> : IUndirectedEdge<T> where T : struct
     {
         /// <summary>
         /// The vertices comprising the edge.

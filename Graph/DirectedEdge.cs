@@ -7,7 +7,7 @@
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public class DirectedEdge<T> : IDirectedEdge<T> where T : struct
+    public struct DirectedEdge<T> : IDirectedEdge<T> where T : struct
     {
         /// <summary>
         /// Creates a new <see cref="DirectedEdge{T}"/> from two vertices.
