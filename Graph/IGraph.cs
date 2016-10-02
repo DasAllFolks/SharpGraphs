@@ -14,5 +14,24 @@ namespace Graph
         /// The graph's vertices.
         /// </summary>
         ISet<V> Vertices { get; }
+
+        /// <summary>
+        /// Attempts to add an edge to the graph.
+        /// </summary>
+        /// <param name="edge">
+        /// The edge.
+        /// </param>
+        /// <param name="allowNewVertices">
+        /// Iff true, add vertices in the edge which aren't yet in the graph
+        /// to the graph's vertex set.
+        /// </param>
+        /// <returns>
+        /// True iff the edge was successfully added.
+        /// </returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown if the edge contains at least one edge not in the graph,
+        /// and allowNewVertices is set to false.
+        /// </exception>
+        bool TryAddEdge(E edge, bool allowNewVertices = false);
     }
 }
