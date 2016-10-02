@@ -26,12 +26,15 @@ namespace Graph
         /// to the graph's vertex set.
         /// </param>
         /// <returns>
-        /// True iff the edge was successfully added.
+        /// True if the edge was successfully added (the definition of
+        /// "success" may vary from implementation to implementation).
         /// </returns>
         /// <exception cref="InvalidOperationException">
         /// Thrown if the edge contains at least one edge not in the graph,
         /// and allowNewVertices is set to false.
         /// </exception>
         bool TryAddEdge(E edge, bool allowNewVertices = false);
+
+        bool TryRemoveEdge(E edge);
     }
 }
