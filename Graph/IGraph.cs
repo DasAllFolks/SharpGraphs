@@ -11,11 +11,6 @@ namespace Graph
     public interface IGraph<V, E> : IEquatable<IGraph<V, E>> where E: IEdge<V>
     {
         /// <summary>
-        /// The graph's vertices.
-        /// </summary>
-        ISet<V> Vertices { get; }
-
-        /// <summary>
         /// Attempts to add an edge to the graph.
         /// </summary>
         /// <param name="edge">
