@@ -10,7 +10,7 @@ namespace Graph
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IUndirectedEdge<T> : IEquatable<IUndirectedEdge<T>> where T : struct
+    public interface IUndirectedEdge<T> : IEdge<T>, IEquatable<IUndirectedEdge<T>> where T : struct
     {
         /// <summary>
         /// The vertices comprising the <see cref="IUndirectedEdge{T}"/>.
