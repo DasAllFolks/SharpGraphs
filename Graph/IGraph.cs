@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -9,5 +10,9 @@ namespace Graph
     /// <typeparam name="E">The edge type.</typeparam>
     public interface IGraph<V, E> : IEquatable<IGraph<V, E>> where E: IEdge<V>
     {
+        /// <summary>
+        /// The graph's vertices.
+        /// </summary>
+        ISet<V> Vertices { get; }
     }
 }
