@@ -12,11 +12,6 @@
         /// <summary>
         /// The Vertex's label.
         /// </summary>
-        /// <remarks>
-        /// May be null to represent the absence of a label, although for a
-        /// fully unlabeled Graph, you'll probably get cleaner code using
-        /// <see cref=""/>.
-        /// </remarks>
         public T Label { get; set; }
     }
 }
