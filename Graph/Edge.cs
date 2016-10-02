@@ -20,7 +20,7 @@ namespace Graph
         private readonly ISet<T> _vertices;
 
         /// <summary>
-        /// Creates a new Edge from two vertices.
+        /// Creates a new <see cref="Edge{T}"/> from two vertices.
         /// </summary>
         /// <remarks>
         /// The order of the vertices in the constructor is irrelevant.
