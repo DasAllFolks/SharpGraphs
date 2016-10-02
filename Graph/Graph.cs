@@ -3,36 +3,6 @@ using System.Collections.Generic;
 
 namespace Graph
 {
-	public class Edge
-	{
-		// All Edge objects correspond to a directed (unidirectional) graph edge.
-		//
-		// An undirected edge should be represented using a pair of such (directed)
-		// Edges.
-		//
-		// Under this system, loops and multigraphs are also automatically supported.
-		//
-		// Edges are immutable after creation.
-		private Vertex _tail;
-		private Vertex _head;
-
-		public Edge (Vertex tail, Vertex head)
-		{
-			_tail = tail;
-			_head = head;
-		}
-
-		public Vertex Tail
-		{
-			get;
-		}
-
-		public Vertex Head
-		{
-			get;
-		}
-	}
-
     public class Graph
     {
         private HashSet<Graph.Vertex> vertices;
