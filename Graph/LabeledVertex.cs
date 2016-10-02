@@ -7,7 +7,7 @@
     /// <typeparam name="T">
     /// The type of the vertex's label.
     /// </typeparam>
-    public class LabeledVertex<T>
+    public class LabeledVertex<T> where T: struct
     {
         /// <summary>
         /// The Vertex's label.
