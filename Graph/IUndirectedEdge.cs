@@ -1,4 +1,6 @@
-﻿namespace Graph
+﻿using System;
+
+namespace Graph
 {
     /// <summary>
     /// Represents an undirected edge (link) in a <see cref="Graph"/> using
@@ -7,7 +9,7 @@
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IUndirectedEdge<T> where T : struct
+    public interface IUndirectedEdge<T> : IEquatable<IUndirectedEdge<T>> where T : struct
     {
         /// <summary>
         /// Returns true iff the <see cref="IUndirectedEdge{T}"/> contains a

@@ -39,5 +39,10 @@ namespace Graph
         {
             return _vertices.Contains(vertex);
         }
+
+        public bool Equals(IUndirectedEdge<T> undirectedEdge)
+        {
+            return _vertices.Equals(undirectedEdge._vertices);
+        }
     }
 }
