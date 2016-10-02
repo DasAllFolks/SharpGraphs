@@ -3,55 +3,6 @@ using System.Collections.Generic;
 
 namespace Graph
 {
-	public class Vertex
-	{
-		private bool hasLabel;
-		private string label;
-
-		public Vertex ()
-		{
-			hasLabel = false;
-		}
-
-		public Vertex (string label)
-		{
-			Label = label;
-		}
-
-		public bool HasLabel
-		{
-			get;
-			set;
-		}
-
-		public string Label
-		{
-			get
-			{
-				if (!hasLabel)
-				{
-					throw NoLabelFoundException("This vertex is unlabeled.");
-				}
-
-				return label;
-			}
-			set
-			{
-				label = value;
-				hasLabel = true;
-			}
-		}
-
-		public void ClearLabel ()
-		{
-			hasLabel = false;
-		}
-
-		public class NoLabelFoundException : Exception
-		{
-		}
-	}
-
 	public class Edge
 	{
 		// All Edge objects correspond to a directed (unidirectional) graph edge.
