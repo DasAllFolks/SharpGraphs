@@ -27,5 +27,10 @@
         /// Returns the tail (vertex) of the <see cref="DirectedEdge{T}"/>.
         /// </summary>
         public T Tail { get; private set; }
+
+        public bool Equals(IDirectedEdge<T> directedEdge)
+        {
+            return Head.Equals(directedEdge.Head) && Tail.Equals(directedEdge.Tail);
+        }
     }
 }
