@@ -17,7 +17,7 @@ namespace Graph
         /// <summary>
         /// The vertices comprising the edge.
         /// </summary>
-        private readonly ISet<T> _vertices;
+        public ISet<T> Vertices { get; private set; }
 
         /// <summary>
         /// Creates a new <see cref="UndirectedEdge{T}"/> from two vertices.
@@ -28,21 +28,18 @@ namespace Graph
         public UndirectedEdge(T vertex1, T vertex2)
         {
             // SortedSet used to beautify output for readers.
-            _vertices = new SortedSet<T> { vertex1, vertex2 };
+            Vertices = new SortedSet<T> { vertex1, vertex2 };
         }
 
         /// <summary>
-        /// Returns true iff the <see cref="UndirectedEdge{T}"/> contains a given
-        /// vertex.
+        /// Determines whether two <see cref="IUndirectedEdge{T}"/>s consist
+        /// of the same vertices.
         /// </summary>
-        public bool Contains(T vertex)
-        {
-            return _vertices.Contains(vertex);
-        }
-
+        /// <param name="undirectedEdge"></param>
+        /// <returns></returns>
         public bool Equals(IUndirectedEdge<T> undirectedEdge)
         {
-            return _vertices.Equals(undirectedEdge._vertices);
+            return Vertices.Equals(undirectedEdge.Vertices);
         }
     }
 }

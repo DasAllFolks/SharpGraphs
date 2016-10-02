@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -12,9 +13,8 @@ namespace Graph
     public interface IUndirectedEdge<T> : IEquatable<IUndirectedEdge<T>> where T : struct
     {
         /// <summary>
-        /// Returns true iff the <see cref="IUndirectedEdge{T}"/> contains a
-        /// given vertex.
+        /// The vertices comprising the <see cref="IUndirectedEdge{T}"/>.
         /// </summary>
-        bool Contains(T vertex);
+        ISet<T> Vertices { get; }
     }
 }

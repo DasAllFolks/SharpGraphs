@@ -4,6 +4,9 @@
     /// Represents a directed edge (arrow) in a <see cref="Graph"/> using
     /// vertex (node) labels of type T.
     /// </summary>
+    /// <remarks>
+    /// <see cref="DirectedEdge{T}"/>s are immutable after construction.
+    /// </remarks>
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
@@ -28,6 +31,10 @@
         /// </summary>
         public T Tail { get; private set; }
 
+        /// <summary>
+        /// Determines whether two <see cref="IDirectedEdge{T}"/>s have the
+        /// same head and tail vertices.
+        /// </summary>
         public bool Equals(IDirectedEdge<T> directedEdge)
         {
             return Head.Equals(directedEdge.Head) && Tail.Equals(directedEdge.Tail);
