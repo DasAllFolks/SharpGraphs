@@ -8,8 +8,9 @@ namespace Graph
     /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IDirectedEdge<V> : IEdge<V>, IEquatable<IDirectedEdge<V>>
+    public interface IDirectedEdge<V, W> : IEdge<V, W>, IEquatable<IDirectedEdge<V, W>>
         where V : struct, IEquatable<V>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
         /// Returns the head (vertex) of the <see cref="IDirectedEdge{V}"/>.
