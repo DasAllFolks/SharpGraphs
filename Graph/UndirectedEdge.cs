@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -44,7 +43,8 @@ namespace Graph
         /// </summary>
         public bool Equals(IUndirectedEdge<V, W> undirectedEdge)
         {
-            return Vertices.Equals(undirectedEdge.Vertices);
+            return Vertices.Equals(undirectedEdge.Vertices) &&
+                Weight.Equals(undirectedEdge.Weight);
         }
     }
 }
