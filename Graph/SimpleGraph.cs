@@ -1,4 +1,6 @@
-﻿namespace Graph
+﻿using System;
+
+namespace Graph
 {
     /// <summary>
     /// Represents a simple graph (i.e., as opposed to a
@@ -12,6 +14,9 @@
     /// The type used for the edge weight.
     /// </typeparam>
     public class SimpleGraph<V, E, W> : IGraph<V, E, W>
+        where V : struct, IEquatable<V>
+        where E : IEdge<V, W>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
     }
 }
