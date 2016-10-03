@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace Graph
 {
     /// <summary>
-    /// Represents an undirected edge (link) in a <see cref="Graph"/> using
-    /// vertex (node) labels of type T.
+    /// Represents an undirected edge (link) in a labeled <see cref="IGraph"/>.
     /// </summary>
     /// <typeparam name="T">
     /// The type used to create vertex (node) labels.

@@ -3,7 +3,7 @@
 namespace Graph
 {
     /// <summary>
-    /// Represents a directed edge (arrow) in a labeled <see cref="Graph"/>.
+    /// Represents a directed edge (arrow) in a labeled <see cref="IGraph"/>.
     /// </summary>
     /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
