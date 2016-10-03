@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -18,5 +19,22 @@ namespace Graph
         where E : IEdge<V, W>
         where W : struct, IComparable<W>, IEquatable<W>
     {
+        /// <summary>
+        /// The graph's vertices.
+        /// </summary>
+        private readonly ISet<V> _vertices = new HashSet<V>();
+
+        /// <summary>
+        /// Attempts to add a vertex to the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully added, false if it already
+        /// existed.
+        /// </returns>
+        public bool TryAddVertex(V vertex)
+        {
+            return _vertices.Add(vertex);
+        }
     }
 }
