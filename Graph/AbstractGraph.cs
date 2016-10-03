@@ -50,5 +50,44 @@ namespace Graph
         {
             return vertices.Remove(vertex);
         }
+
+        /// <summary>
+        /// Attempts to add an edge to the graph.
+        /// </summary>
+        /// <param name="edge">
+        /// The edge.
+        /// </param>
+        /// <param name="allowNewVertices">
+        /// Iff true, add vertices in the edge which aren't yet in the graph
+        /// to the graph's vertex set.
+        /// </param>
+        /// <returns>
+        /// True if the edge was successfully added (the definition of
+        /// "success" may vary from implementation to implementation).
+        /// </returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown if the edge contains at least one edge not in the graph,
+        /// and allowNewVertices is set to false.
+        /// </exception>
+        public bool TryAddEdge(E edge, bool allowNewVertices = false)
+        {
+            if (edge == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            // XXXX: Need a way to check vertices here.
+            if (!allowNewVertices && !())
+            {
+
+            }
+
+            return TryAddEdgeImpl(edge);
+        }
+
+        protected bool TryAddEdgeImpl(E edge)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
