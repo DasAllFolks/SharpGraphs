@@ -6,14 +6,19 @@ namespace Graph
     /// <summary>
     /// Represents an undirected edge (link) in a labeled <see cref="IGraph"/>.
     /// </summary>
-    /// <typeparam name="T">
+    /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IUndirectedEdge<T> : IEdge<T>, IEquatable<IUndirectedEdge<T>> where T : struct
+    /// <typeparam name="W">
+    /// The type used for the edge weight.
+    /// </typeparam>
+    public interface IUndirectedEdge<V, W> : IEdge<V, W>, IEquatable<IUndirectedEdge<V, W>>
+        where V : struct, IEquatable<V>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
-        /// The vertices comprising the <see cref="IUndirectedEdge{T}"/>.
+        /// The vertices comprising the <see cref="IUndirectedEdge{V}"/>.
         /// </summary>
-        ISet<T> Vertices { get; }
+        ISet<V> Vertices { get; }
     }
 }
