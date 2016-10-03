@@ -23,6 +23,32 @@ namespace Graph
         /// <summary>
         /// The graph's vertices.
         /// </summary>
-        protected readonly ISet<V> _vertices = new HashSet<V>();
+        protected readonly ISet<V> vertices = new HashSet<V>();
+
+        /// <summary>
+        /// Attempts to add a vertex to the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully added, false if it already
+        /// existed.
+        /// </returns>
+        public bool TryAddVertex(V vertex)
+        {
+            return vertices.Add(vertex);
+        }
+
+        /// <summary>
+        /// Attempts to remove a vertex from the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully removed, false if no such
+        /// vertex was found in the graph.
+        /// </returns>
+        public bool TryRemoveVertex(V vertex)
+        {
+            return vertices.Remove(vertex);
+        }
     }
 }
