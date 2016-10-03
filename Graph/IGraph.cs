@@ -5,9 +5,17 @@ namespace Graph
     /// <summary>
     /// Represents a labeled graph.
     /// </summary>
-    /// <typeparam name="V">The vertex type.</typeparam>
+    /// <typeparam name="V">
+    /// The type used to create vertex (node) labels.
+    /// </typeparam>
     /// <typeparam name="E">The edge type.</typeparam>
-    public interface IGraph<V, E> : IEquatable<IGraph<V, E>> where E: IEdge<V>
+    /// <typeparam name="W">
+    /// The type used for the edge weight.
+    /// </typeparam>
+    public interface IGraph<V, E, W> : IEquatable<IGraph<V, E, W>>
+        where V : struct, IEquatable<V>
+        where E : IEdge<V, W>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
         /// Attempts to add a vertex to the graph.

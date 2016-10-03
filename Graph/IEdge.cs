@@ -13,7 +13,7 @@ namespace Graph
     /// </typeparam>
     public interface IEdge<V, W> : IEquatable<IEdge<V, W>>
         where V : struct, IEquatable<V>
-        where W : struct, IEquatable<W>, IComparable<W>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
         /// The weight of the <see cref="IEdge{V, W}"/>.
