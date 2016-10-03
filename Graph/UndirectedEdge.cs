@@ -1,43 +1,48 @@
 ﻿using System.Collections.Generic;
 
+using System;
+
 namespace Graph
 {
     /// <summary>
-    /// Represents an undirected edge (link) in a <see cref="Graph"/> using
-    /// vertex (node) labels of type T.
+    /// Represents an undirected edge (link) in a labeled <see cref="IGraph"/>.
     /// </summary>
-    /// <remarks>
-    /// <see cref="UndirectedEdge{T}"/>s are immutable after construction.
-    /// </remarks>
-    /// <typeparam name="T">
+    /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public struct UndirectedEdge<T> : IUndirectedEdge<T> where T : struct
+    public struct UndirectedEdge<V, W> : IUndirectedEdge<V, W>
+        where V : struct, IEquatable<V>
+        where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
-        /// The vertices comprising the edge.
+        /// The vertices comprising the <see cref="UndirectedEdge{V, W}"/>.
         /// </summary>
-        public ISet<T> Vertices { get; private set; }
+        /// <remarks>These are immutable after construction.</remarks>
+        public ISet<V> Vertices { get; private set; }
 
         /// <summary>
-        /// Creates a new <see cref="UndirectedEdge{T}"/> from two vertices.
+        /// The weight of the <see cref="UndirectedEdge{V, W}"/>.
+        /// </summary>
+        public W Weight { get; set; }
+
+        /// <summary>
+        /// Creates a new <see cref="UndirectedEdge{V, W}"/> from two vertices.
         /// </summary>
         /// <remarks>
         /// The order of the vertices in the constructor is irrelevant.
         /// </remarks>
-        public UndirectedEdge(T vertex1, T vertex2)
+        public UndirectedEdge(V vertex1, V vertex2, W weight)
         {
             // SortedSet used to beautify output for readers.
-            Vertices = new SortedSet<T> { vertex1, vertex2 };
+            Vertices = new SortedSet<V> { vertex1, vertex2 };
+            Weight = weight;
         }
 
         /// <summary>
-        /// Determines whether two <see cref="IUndirectedEdge{T}"/>s consist
-        /// of the same vertices.
+        /// Determines whether two <see cref="IUndirectedEdge{V, W}"/>s
+        /// have the same vertices and weight.
         /// </summary>
-        /// <param name="undirectedEdge"></param>
-        /// <returns></returns>
-        public bool Equals(IUndirectedEdge<T> undirectedEdge)
+        public bool Equals(IUndirectedEdge<V, W> undirectedEdge)
         {
             return Vertices.Equals(undirectedEdge.Vertices);
         }
