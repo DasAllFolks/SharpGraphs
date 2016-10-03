@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,8 +30,17 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AbstractEdge.cs" />
+    <Compile Include="AbstractGraph.cs" />
+    <Compile Include="DirectedEdge.cs" />
+    <Compile Include="IEdge.cs" />
+    <Compile Include="IGraph.cs" />
+    <Compile Include="MultiGraph.cs" />
+    <Compile Include="SimpleGraph.cs" />
+    <Compile Include="UndirectedEdge.cs" />
+    <Compile Include="IDirectedEdge.cs" />
+    <Compile Include="IUndirectedEdge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Graph.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
