@@ -9,7 +9,7 @@ namespace Graph
     /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public struct UndirectedEdge<V, W> : IUndirectedEdge<V, W>
+    public class UndirectedEdge<V, W> : IUndirectedEdge<V, W>
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {

@@ -11,7 +11,7 @@ namespace Graph
     /// <typeparam name="W">
     /// The type used for the edge weight.
     /// </typeparam>
-    public struct DirectedEdge<V, W> : IDirectedEdge<V, W>
+    public class DirectedEdge<V, W> : IDirectedEdge<V, W>
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {
