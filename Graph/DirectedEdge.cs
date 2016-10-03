@@ -11,7 +11,7 @@ namespace Graph
     /// <typeparam name="W">
     /// The type used for the edge weight.
     /// </typeparam>
-    public class DirectedEdge<V, W> : IDirectedEdge<V, W>
+    public class DirectedEdge<V, W> : AbstractEdge<V, W>, IDirectedEdge<V, W>
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {
@@ -26,11 +26,6 @@ namespace Graph
         /// </summary>
         /// <remarks>Immutable after construction.</remarks>
         public V Tail { get; private set; }
-
-        /// <summary>
-        /// The weight of the <see cref="DirectedEdge{V, W}"/>.
-        /// </summary>
-        public W Weight { get; set; }
 
         /// <summary>
         /// Creates a new <see cref="DirectedEdge{T}"/> from two vertices.

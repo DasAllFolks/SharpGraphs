@@ -9,7 +9,7 @@ namespace Graph
     /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public class UndirectedEdge<V, W> : IUndirectedEdge<V, W>
+    public class UndirectedEdge<V, W> : AbstractEdge<V, W>, IUndirectedEdge<V, W>
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {
@@ -18,11 +18,6 @@ namespace Graph
         /// </summary>
         /// <remarks>These are immutable after construction.</remarks>
         public ISet<V> Vertices { get; private set; }
-
-        /// <summary>
-        /// The weight of the <see cref="UndirectedEdge{V, W}"/>.
-        /// </summary>
-        public W Weight { get; set; }
 
         /// <summary>
         /// Creates a new <see cref="UndirectedEdge{V, W}"/> from two vertices.
