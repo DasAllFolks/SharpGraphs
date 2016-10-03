@@ -2,7 +2,7 @@
 
 A library of graph algorithms and data structures in C#.
 
-This package is currently WIP, but the plan is to ultimately turn it into a standalone NuGet package.
+This library is currently WIP, but the plan is to ultimately turn it into a standalone NuGet package.
 
 ## License
 
