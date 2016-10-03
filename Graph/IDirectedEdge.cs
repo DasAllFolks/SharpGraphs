@@ -3,22 +3,22 @@
 namespace Graph
 {
     /// <summary>
-    /// Represents a directed edge (arrow) in a <see cref="Graph"/> using
-    /// vertex (node) labels of type T.
+    /// Represents a directed edge (arrow) in a labeled <see cref="Graph"/>.
     /// </summary>
-    /// <typeparam name="T">
+    /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    public interface IDirectedEdge<T> : IEdge<T>, IEquatable<IDirectedEdge<T>> where T : struct
+    public interface IDirectedEdge<V> : IEdge<V>, IEquatable<IDirectedEdge<V>>
+        where V : struct, IEquatable<V>
     {
         /// <summary>
-        /// Returns the head (vertex) of the <see cref="IDirectedEdge{T}"/>.
+        /// Returns the head (vertex) of the <see cref="IDirectedEdge{V}"/>.
         /// </summary>
-        T Head { get; }
+        V Head { get; }
 
         /// <summary>
-        /// Returns the tail (vertex) of the <see cref="IDirectedEdge{T}"/>.
+        /// Returns the tail (vertex) of the <see cref="IDirectedEdge{V}"/>.
         /// </summary>
-        T Tail { get; }
+        V Tail { get; }
     }
 }
