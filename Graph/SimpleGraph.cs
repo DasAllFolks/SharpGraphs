@@ -36,5 +36,18 @@ namespace Graph
         {
             return _vertices.Add(vertex);
         }
+
+        /// <summary>
+        /// Attempts to remove a vertex from the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully removed, false if no such
+        /// vertex was found in the graph.
+        /// </returns>
+        public bool TryRemoveVertex(V vertex)
+        {
+            return _vertices.Remove(vertex);
+        }
     }
 }
