@@ -1,15 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Graph
 {
     /// <summary>
-    /// Represents a graph.
+    /// Represents a labeled graph.
     /// </summary>
     /// <typeparam name="V">The vertex type.</typeparam>
     /// <typeparam name="E">The edge type.</typeparam>
     public interface IGraph<V, E> : IEquatable<IGraph<V, E>> where E: IEdge<V>
     {
+        /// <summary>
+        /// Attempts to add a vertex to the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully added, false if it already
+        /// existed.
+        /// </returns>
+        bool TryAddVertex(V vertex);
+
+        /// <summary>
+        /// Attempts to remove a vertex from the graph.
+        /// </summary>
+        /// <param name="vertex">The vertex.</param>
+        /// <returns>
+        /// True if the vertex was successfully removed, false if no such
+        /// vertex was found in the graph.
+        /// </returns>
+        bool TryRemoveVertex(V vertex);
+
         /// <summary>
         /// Attempts to add an edge to the graph.
         /// </summary>
