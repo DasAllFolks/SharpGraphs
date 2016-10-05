@@ -30,7 +30,8 @@ namespace Graph
         /// <summary>
         /// Creates a new <see cref="DirectedEdge{T}"/> from two vertices.
         /// </summary>
-        public DirectedEdge(V head, V tail, W weight) : base(head, tail, weight)
+        public DirectedEdge(V head, V tail, W weight)
+            : base(head, tail, weight)
         {
             Head = head;
             Tail = tail;
