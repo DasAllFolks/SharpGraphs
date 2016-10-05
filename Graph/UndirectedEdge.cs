@@ -17,7 +17,7 @@ namespace Graph
         /// The vertices comprising the <see cref="UndirectedEdge{V, W}"/>.
         /// </summary>
         /// <remarks>These are immutable after construction.</remarks>
-        public ISet<V> Vertices { get; private set; }
+        public IReadOnlyCollection<V> Vertices { get; private set; }
 
         /// <summary>
         /// Creates a new <see cref="UndirectedEdge{V, W}"/> from two vertices.
@@ -28,7 +28,7 @@ namespace Graph
         public UndirectedEdge(V vertex1, V vertex2, W weight)
         {
             // SortedSet used to beautify output for readers.
-            Vertices = new SortedSet<V> { vertex1, vertex2 };
+            Vertices = new List<V> { vertex1, vertex2 };
             Weight = weight;
         }
 

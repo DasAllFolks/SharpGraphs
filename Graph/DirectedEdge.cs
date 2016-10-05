@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -26,6 +27,11 @@ namespace Graph
         /// </summary>
         /// <remarks>Immutable after construction.</remarks>
         public V Tail { get; private set; }
+        
+        /// <summary>
+        /// The Edge's vertices.
+        /// </summary>
+        public IReadOnlyCollection<V> Vertices { get; }
 
         /// <summary>
         /// Creates a new <see cref="DirectedEdge{T}"/> from two vertices.
