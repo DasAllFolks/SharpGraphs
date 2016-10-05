@@ -16,9 +16,5 @@ namespace Graph
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {
-        /// <summary>
-        /// The vertices comprising the <see cref="IUndirectedEdge{V}"/>.
-        /// </summary>
-        ISet<V> Vertices { get; }
     }
 }
