@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graph
 {
@@ -15,6 +16,11 @@ namespace Graph
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
     {
+        /// <summary>
+        /// The vertices of the <see cref="IEdge{V, W}"/>.
+        /// </summary>
+        IReadOnlyCollection<V> Vertices { get; }
+
         /// <summary>
         /// The weight of the <see cref="IEdge{V, W}"/>.
         /// </summary>
