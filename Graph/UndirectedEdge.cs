@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Graph
 {
@@ -14,22 +13,14 @@ namespace Graph
         where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
-        /// The vertices comprising the <see cref="UndirectedEdge{V, W}"/>.
-        /// </summary>
-        /// <remarks>These are immutable after construction.</remarks>
-        public IReadOnlyCollection<V> Vertices { get; private set; }
-
-        /// <summary>
         /// Creates a new <see cref="UndirectedEdge{V, W}"/> from two vertices.
         /// </summary>
         /// <remarks>
         /// The order of the vertices in the constructor is irrelevant.
         /// </remarks>
         public UndirectedEdge(V vertex1, V vertex2, W weight)
+            : base(vertex1, vertex2, weight)
         {
-            // SortedSet used to beautify output for readers.
-            Vertices = new List<V> { vertex1, vertex2 };
-            Weight = weight;
         }
 
         /// <summary>
