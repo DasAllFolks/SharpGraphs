@@ -8,13 +8,11 @@ namespace Graph
     /// <typeparam name="V">
     /// The type used to create vertex (node) labels.
     /// </typeparam>
-    /// <typeparam name="E">The edge type.</typeparam>
     /// <typeparam name="W">
     /// The type used for the edge weight.
     /// </typeparam>
-    public interface IGraph<V, E, W> : IEquatable<IGraph<V, E, W>>
+    public interface IGraph<V, W> : IEquatable<IGraph<V, W>>
         where V : struct, IEquatable<V>
-        where E : IEdge<V, W>
         where W : struct, IComparable<W>, IEquatable<W>
     {
         /// <summary>
@@ -30,10 +28,14 @@ namespace Graph
         /// <summary>
         /// Attempts to remove a vertex from the graph.
         /// </summary>
+        /// <remarks>
+        /// This will also remove all edges to which the vertex is incident.
+        /// </remarks>
         /// <param name="vertex">The vertex.</param>
         /// <returns>
-        /// True if the vertex was successfully removed, false if no such
-        /// vertex was found in the graph.
+        /// True if the vertex and all edges to which it was incident were,
+        /// successfully removed, false if no such vertex was found in the
+        /// graph.
         /// </returns>
         bool TryRemoveVertex(V vertex);
 
