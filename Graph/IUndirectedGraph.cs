@@ -1,4 +1,8 @@
-﻿namespace Graph
+﻿using System;
+
+using Graph.Exceptions;
+
+namespace Graph
 {
     /// <summary>
     /// Represents an undirected, labeled graph.
@@ -30,7 +34,9 @@
         /// <returns>
         /// True if and only if the edge was successfully removed.
         /// </returns>
-        /// <exception cref="VertexNotFoundException"></exception>
+        /// <exception cref="VertexNotFoundException">
+        /// Thrown if at least one of the vertices was not found in the graph.
+        /// </exception>
         bool TryRemoveEdge(V vertex1, V vertex2);
     }
 }
