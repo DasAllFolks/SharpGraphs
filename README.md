@@ -6,6 +6,6 @@ This library is currently WIP, but the plan is to ultimately turn it into a stan
 
 ## License
 
-Copyright © 2015-2016 Steven Das
+Copyright © 2015-2017 Steven Das
 
 Distributed under the Apache License 2.0.
