@@ -34,6 +34,7 @@
     <Compile Include="AbstractGraph.cs" />
     <Compile Include="DirectedEdge.cs" />
     <Compile Include="Exceptions\VertexNotFoundException.cs" />
+    <Compile Include="IDirectedGraph.cs" />
     <Compile Include="IEdge.cs" />
     <Compile Include="IGraph.cs" />
     <Compile Include="IUndirectedGraph.cs" />
