@@ -7,6 +7,9 @@ namespace Graph
     /// <summary>
     /// Represents a directed, labeled graph.
     /// </summary>
+    /// <remarks>
+    /// This interface can be used for either a simple graph or a multigraph.
+    /// </remarks>
     public interface IDirectedGraph<V, W> : IGraph<V, W>
         where V : struct, IEquatable<V>
         where W : struct, IComparable<W>, IEquatable<W>
@@ -22,7 +25,7 @@ namespace Graph
         /// than just failing.
         /// </param>
         /// <returns>
-        /// True if the edge was successfully added, false if it already existed.
+        /// True if the edge was successfully added, false otherwise.
         /// </returns>
         /// <exception cref="VertexNotFoundException">
         /// Thrown if at least one vertex was not already in the graph, and
